@@ -16,6 +16,14 @@ body {
 .frontpage {
   padding-top: 25%;
 }
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+code {
+  word-wrap: break-word;
+}
 /* Highlight.js - Default */
 code[class*="language-"],
 pre[class*="language-"] {
