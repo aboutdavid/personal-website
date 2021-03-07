@@ -21,6 +21,9 @@ video {
   max-width: 100%;
   height: auto;
 }
+a, a:visited, a:hover {
+ color: #ff6e6c;
+}
 code {
   word-wrap: break-word;
 }
