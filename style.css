@@ -21,9 +21,6 @@ video {
   max-width: 100%;
   height: auto;
 }
-a, a:visited, a:hover {
- color: #ff6e6c;
-}
 code {
   word-wrap: break-word;
 }
@@ -240,6 +237,9 @@ pre[class*="language-"] {
   html {
     background-color: #1d1f21;
     color: #e0e0e0;
+  }
+  a, a:visited, a:hover {
+    color: #ff6e6c;
   }
   /* Highlight.js - Atom One Dark */
   .token {
