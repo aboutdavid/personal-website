@@ -1,0 +1,18 @@
+---
+layout: base.html
+pagination:
+  data: posts
+  size: 1
+  alias: post
+permalink: post/{{ post.slug }}/
+---
+
+<h1>{{ post.title }}</h1>
+<small>Written on {{ post.date }} &bull; {{ post.readTime }} </small>
+
+{{ post.html | safe }}
+
+<p>
+  You can see my other blog posts <a href="/blog">here</a>.<br />
+  You can see the main site <a href="/">here</a>.
+</p>

@@ -1,0 +1,18 @@
+---
+layout: base.html
+---
+
+<h1>Posts</h1>
+<p>
+  Welcome to my blog. All posts are written using
+  <a href="https://notion.so">Notion</a>
+</p>
+<ul>
+  {% for post in posts %}
+  <li>
+    <a href="/post/{{ post.slug }}">{{ post.title }}</a><br />Written on {{
+    post.date }} &bull; {{ post.readTime }}
+  </li>
+  <br />
+  {% endfor %}
+</ul>
