@@ -7,15 +7,24 @@
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
 
-    <meta name="title" content="aboutdavid" />
+    <meta
+      name="title"
+      content="{% if post.title %}{{ post.title }} - {% endif %}aboutdavid"
+    />
     <meta
       name="description"
       content="the website of david, oh wait that's me"
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://aboutdavid.me/" />
-    <meta property="og:title" content="aboutdavid" />
+    <meta
+      property="og:url"
+      content="https://aboutdavid.me/{% if post.slug %}{{ post.slug }}{% endif %}"
+    />
+    <meta
+      property="og:title"
+      content="{% if post.title %}{{ post.title }} - {% endif %}aboutdavid"
+    />
     <meta
       property="og:description"
       content="the website of david, oh wait that's me"
@@ -23,8 +32,14 @@
     <meta property="og:image" content="" />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://aboutdavid.me/" />
-    <meta property="twitter:title" content="aboutdavid" />
+    <meta
+      property="twitter:url"
+      content="https://aboutdavid.me/{% if post.slug %}{{ post.slug }}{% endif %}"
+    />
+    <meta
+      property="twitter:title"
+      content="{% if post.title %}{{ post.title }} - {% endif %}aboutdavid"
+    />
     <meta
       property="twitter:description"
       content="the website of david, oh wait that's me"
