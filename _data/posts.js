@@ -40,6 +40,7 @@ while (i < res.length) {
   posts.push({
     title: post.fields.Title,
     date: moment(date.toISOString()).format("MMMM Do[,] YYYY"),
+    dateObject: date,
     description: post.fields.Description || "",
     readTime: readingTime(html).text,
     slug: slug,
@@ -48,4 +49,6 @@ while (i < res.length) {
   });
   i++;
 }
-module.exports = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+module.exports = posts.sort(
+  (a, b) => new Date(b.dateObject) - new Date(a.dateObject)
+);
