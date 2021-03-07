@@ -13,7 +13,7 @@
     />
     <meta
       name="description"
-      content="the website of david, oh wait that's me"
+      content="{% if post.description %}{{ post.description }}{% else %}the website of david, oh wait that's me{% endif %}"
     />
 
     <meta property="og:type" content="website" />
@@ -27,7 +27,7 @@
     />
     <meta
       property="og:description"
-      content="the website of david, oh wait that's me"
+      content="{% if post.description %}{{ post.description }}{% else %}the website of david, oh wait that's me{% endif %}"
     />
     <meta property="og:image" content="" />
 
@@ -42,7 +42,7 @@
     />
     <meta
       property="twitter:description"
-      content="the website of david, oh wait that's me"
+      content="{% if post.description %}{{ post.description }}{% else %}the website of david, oh wait that's me{% endif %}"
     />
     <meta property="twitter:image" content="" />
     <title>aboutdavid</title>
