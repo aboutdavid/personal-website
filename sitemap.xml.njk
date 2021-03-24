@@ -1,0 +1,22 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>David's Blog</title>
+<subtitle>This is my blog because why not?</subtitle>
+<link href="https://aboutdavid.me/" rel="self"/>
+<link href="https://aboutdavid.me/"/>
+<updated>{{ new Date() }}</updated>
+<id>https://aboutdavid.me/</id>
+<author>
+<name>aboutDavid</name>
+<email>aboutdavid@protonmail.com</email>
+</author>
+{% for post in posts %}
+<entry>
+<title>{{ post.title }}</title>
+<link href="{{ post.url }}"/>
+<updated>{{ post.dateObject.toString() }}</updated>
+<id>{{ post.url }}</id>
+<description>{{ post.description or post.html | truncate(100, true, "...") }}</description>
+<content type="html">{{ post.html }}</content>
+</entry>
+{% endfor %}
+</feed>
